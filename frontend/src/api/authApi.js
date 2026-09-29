@@ -1,0 +1,10 @@
+import api from './axiosInstance';
+
+export const authApi = {
+  register: (payload) => api.post('/auth/register', payload),
+  login: (payload) => api.post('/auth/login', payload),
+  logout: () => api.post('/auth/logout'),
+  getMe: () => api.get('/auth/me'),
+  changePassword: (payload) => api.post('/auth/change-password', payload),
+  createStaff: (payload) => api.post('/auth/staff', payload),
+};
